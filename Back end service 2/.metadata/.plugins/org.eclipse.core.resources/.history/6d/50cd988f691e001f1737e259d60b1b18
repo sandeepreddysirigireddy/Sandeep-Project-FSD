@@ -1,0 +1,5 @@
+package credStorage.cred.service;
+
+public interface ClientModel {
+
+}

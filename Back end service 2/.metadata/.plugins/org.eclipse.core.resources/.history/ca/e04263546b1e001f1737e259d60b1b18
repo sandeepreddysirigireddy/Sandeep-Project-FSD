@@ -1,0 +1,14 @@
+package credStorage.cred.service;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import credStorage.cred.controller.User;
+
+@FeignClient(name="micro2")
+public interface ClientModel {
+	  @GetMapping("/users/findUser/{id}")
+	    User getUserById(@PathVariable int id);
+ 
+}
